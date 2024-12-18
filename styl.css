@@ -1,0 +1,162 @@
+/* === Global Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* === Header === */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+/* === Main Section === */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2e7d32;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+/* === Footer === */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+/* === Grid for Tools/Products === */
+.tool-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+/* === Tool and Product Cards === */
+.tool-card, .product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+}
+tool-card:hover, .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tool-card h3, .product-card h3 {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+.tool-card p, .product-card p {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+/* === Navbar Buttons (if needed) === */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+    background-color: #388e3c;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+main, .tool-grid, .product-grid {
+    animation: fadeIn 0.8s ease-in-out;
+}
+/* === Media Queries === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .tool-card, .product-card {
+        padding: 1rem 0.5rem;}
+}
